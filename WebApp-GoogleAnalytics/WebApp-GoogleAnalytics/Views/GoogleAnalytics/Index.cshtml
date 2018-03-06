@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<html>
+<head>
+
+</head>
+<body>
+    <div><input type="text" id="txtName" name="name"/></div>
+    <div><input type="button" id="btnSend" value="Send"/></div>
+</body>
+</html>
+@section scripts{
+    <script type="text/javascript">
+        $("#txtName").blur(function () {
+            debugger;
+            ga('send', 'event', 'Text_Box_Blur', 'Blur');
+        });
+        $("#btnSend").click(function () {
+            debugger;
+            ga('send', 'event', 'Button_Send_Click', 'Click');
+        });
+       
+    </script>
+}
